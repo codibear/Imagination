@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.codiibear.imagination.dao.ImaginationDao">
+    <select id="findAll" resultType="imagination" >
+        SELECT * FROM imag
+    </select>
+    <insert id="saveIma" parameterType="imagination">
+        insert into imag (imaname, imabrief,imacontent,imaphoto)
+        values (#{imaname},#{imabrief},#{imacontent},#{imaphoto})
+    </insert>
+
+    <!--<select id="findOne" parameterType="customer" resultType="customer" >
+        SELECT * FROM customer WHERE
+        username=#{username}
+        AND
+        userpwd=#{userpwd}
+    </select>
+
+    <select id="findByName" parameterType="customer" resultType="customer" >
+        SELECT * FROM customer WHERE
+        username=#{username}
+    </select>
+
+    <insert id="saveUser" parameterType="customer">
+        insert into customer (username, userpwd,nickname,usermotto,usercerti)
+        values (#{username}, #{userpwd},#{nickname},#{usermotto},#{usercerti})
+    </insert>-->
+</mapper>
